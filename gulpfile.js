@@ -29,7 +29,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('build', ['webpack'], function() {
-	return gulp.src(['./lib/*.js','./vendor/*.js'])
+	return gulp.src(['./vendor/*.js','./lib/*.js'])
 		.pipe(concat('neoui-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
@@ -37,4 +37,4 @@ gulp.task('build', ['webpack'], function() {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('dist', ['build'])
+gulp.task('dist', ['build']);

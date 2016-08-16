@@ -1,11 +1,11 @@
 {
   "name": "neoui-polyfill",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Neoui针对ie8的Polyfill",
   "main": "index.js",
   "scripts": {
     "compile": "webpack --colors --progress",
-    "build": "gulp dist"
+    "product": "gulp dist"
   },
   "repository": {
     "type": "git",

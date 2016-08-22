@@ -30,10 +30,10 @@ gulp.task('webpack', function() {
 
 gulp.task('build', ['webpack'], function() {
 	return gulp.src(['./vendor/*.js','./lib/*.js'])
-		.pipe(concat('neoui-polyfill.js'))
+		.pipe(concat('u-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
-		.pipe(rename('neoui-polyfill.min.js'))
+		.pipe(rename('u-polyfill.min.js'))
 		.pipe(gulp.dest('./dist'));
 });
 

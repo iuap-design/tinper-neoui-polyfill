@@ -1037,7 +1037,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	var u = {
+	var ex = {
 	    polyfill: polyfill,
 	    _addClass: _addClass,
 	    _removeClass: _removeClass,
@@ -1045,7 +1045,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _toggleClass: _toggleClass
 	};
 
-	exports.u = u;
+	extend(ex, window.u || {});
+	window.u = ex;
+
+	exports.ex = ex;
 
 /***/ }
 /******/ ])

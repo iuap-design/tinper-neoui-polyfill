@@ -3,6 +3,8 @@
  */
 
 
+import {extend} from 'neoui-sparrow/lib/extend';
+
 var polyfill = true;
 var _addClass = function(element,value){
     var classes, cur, clazz, i, finalValue,rclass = /[\t\r\n\f]/g,

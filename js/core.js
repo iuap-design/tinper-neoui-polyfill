@@ -74,7 +74,7 @@ var _toggleClass = function(element, value){
     }
 };
 
-var u = {
+var ex = {
     polyfill: polyfill,
     _addClass: _addClass,
     _removeClass: _removeClass,
@@ -82,5 +82,8 @@ var u = {
     _toggleClass: _toggleClass
 };
 
-export {u};
+extend(ex,window.u || {});
+window.u = ex;
+
+export {ex};
 

@@ -31,8 +31,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "gulp-webpack": "^1.5.0",
+    "neoui-sparrow": "^1.4.6",
     "webpack": "^1.13.1",
-    "yargs": "^4.8.1",
-    "neoui-sparrow": "^1.4.6"
+    "yargs": "^4.8.1"
   }
 }

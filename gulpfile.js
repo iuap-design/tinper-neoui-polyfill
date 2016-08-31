@@ -29,6 +29,15 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('build', ['webpack'], function() {
+	return gulp.src(['./vendor/*.js','!./vendor/respond.js','./lib/*.js'])
+		.pipe(concat('u-polyfill-core.js'))
+		.pipe(gulp.dest('./dist'))
+		.pipe(uglify())
+		.pipe(rename('u-polyfill-core.min.js'))
+		.pipe(gulp.dest('./dist'));
+});
+
+gulp.task('concat', ['build'], function() {
 	return gulp.src(['./vendor/*.js','./lib/*.js'])
 		.pipe(concat('u-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
@@ -37,4 +46,5 @@ gulp.task('build', ['webpack'], function() {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('dist', ['build']);
+
+gulp.task('dist', ['concat']);

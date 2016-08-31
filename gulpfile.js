@@ -28,6 +28,9 @@ gulp.task('webpack', function() {
 		.pipe(gulp.dest('./lib'))
 });
 
+/**
+ * build核心代码
+ */
 gulp.task('build', ['webpack'], function() {
 	return gulp.src(['./vendor/*.js','!./vendor/respond.js','./lib/*.js'])
 		.pipe(concat('u-polyfill-core.js'))
@@ -37,7 +40,22 @@ gulp.task('build', ['webpack'], function() {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('concat', ['build'], function() {
+/**
+ * respond响应式代码
+ */
+gulp.task('respond', function() {
+	return gulp.src(['./vendor/respond.js'])
+		.pipe(rename('u-polyfill-respond.js'))
+		.pipe(gulp.dest('./dist'))
+		.pipe(uglify())
+		.pipe(rename('u-polyfill-respond.min.js'))
+		.pipe(gulp.dest('./dist'));
+});
+
+/**
+ * polyfill代码集成
+ */
+gulp.task('concat', ['build','respond'], function() {
 	return gulp.src(['./vendor/*.js','./lib/*.js'])
 		.pipe(concat('u-polyfill.js'))
 		.pipe(gulp.dest('./dist'))

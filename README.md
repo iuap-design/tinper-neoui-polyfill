@@ -3,6 +3,7 @@ Neoui针对ie8的Polyfill
 
 ## 目录结构
 
+```
 .
 ├── README.md
 ├── dist
@@ -11,22 +12,29 @@ Neoui针对ie8的Polyfill
 ├── lib
 ├── node_modules
 ├── package.json
-├── polyfill
 ├── vendor
 └── webpack.config.js
 
+```
+
 ## 源文件目录
+
+```
 
 ├── js
 │   └── core.js
 
 ├── vendor
 │   ├── JsExtensions.js
+│   ├── ModuleBase.js
 │   └── respond.js
+
+```
+
 
 ## 执行编译命令
 
 ```
-npm run build
+npm run product
 ```
 

@@ -10,7 +10,7 @@ var config = {
 	output: {
 		path: './lib/',
 		filename:'core.js',
-		libraryTarget:'umd',
+		libraryTarget:'var',
 		umdNamedDefine: true
 	},
 	module:{

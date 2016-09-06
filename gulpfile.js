@@ -18,7 +18,7 @@ gulp.task('webpack', function() {
 			},
 			output:{
 				filename:'core.js',
-				libraryTarget:'umd',
+				libraryTarget:'var',
 				umdNamedDefine: true
 			},
 			resolve:{

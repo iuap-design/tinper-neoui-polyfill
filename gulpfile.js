@@ -2,37 +2,12 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
-var webpack = require('gulp-webpack');
-
-gulp.task('webpack', function() {
-	return gulp.src('./js/core.js')
-		.pipe(webpack({
-			module:{
-				loaders:[
-					{
-						test: /(\.jsx|\.js)$/,
-						loader: 'babel',
-						exclude: /(node_modules|bower_components)/ 
-					}
-				]				
-			},
-			output:{
-				filename:'core.js',
-				libraryTarget:'var',
-				umdNamedDefine: true
-			},
-			resolve:{
-				extensions: ['','.js','.jsx']
-			}
-		}))
-		.pipe(gulp.dest('./lib'))
-});
 
 /**
  * build核心代码
  */
-gulp.task('build', ['webpack'], function() {
-	return gulp.src(['./vendor/*.js','!./vendor/respond.js','./lib/*.js'])
+gulp.task('build', function() {
+	return gulp.src(['./vendor/*.js','!./vendor/respond.js','./js/*.js'])
 		.pipe(concat('u-polyfill-core.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
@@ -56,7 +31,7 @@ gulp.task('respond', function() {
  * polyfill代码集成
  */
 gulp.task('concat', ['build','respond'], function() {
-	return gulp.src(['./vendor/*.js','./lib/*.js'])
+	return gulp.src(['./vendor/*.js','./js/*.js'])
 		.pipe(concat('u-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())

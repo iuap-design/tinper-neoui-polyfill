@@ -2,11 +2,10 @@
  * Created by dingrf on 2015-11-18.
  */
 
+var u={};
 
-import {extend} from 'neoui-sparrow/lib/extend';
-
-var polyfill = true;
-var _addClass = function(element,value){
+u.polyfill = true;
+u._addClass = function(element,value){
     var classes, cur, clazz, i, finalValue,rclass = /[\t\r\n\f]/g,
         proceed = typeof value === "string" && value,rnotwhite = (/\S+/g);
 
@@ -31,7 +30,7 @@ var _addClass = function(element,value){
     return this;
 };
 
-var _removeClass = function(element, value) {
+u._removeClass = function(element, value) {
     var classes, cur, clazz, j, finalValue,rnotwhite = (/\S+/g),rclass = /[\t\r\n\f]/g,
         proceed = arguments.length === 0 || typeof value === "string" && value;
 
@@ -60,7 +59,7 @@ var _removeClass = function(element, value) {
     return this;
 };
 
-var _hasClass = function(element,value){
+u._hasClass = function(element,value){
     var rclass = /[\t\r\n\f]/g;
     if ( element.nodeType === 1 && (" " + element.className + " ").replace(rclass, " ").indexOf( value ) >= 0 ) {
         return true;
@@ -68,24 +67,11 @@ var _hasClass = function(element,value){
     return false;
 };
 
-var _toggleClass = function(element, value){
+u._toggleClass = function(element, value){
     if ( _hasClass(element, value) ) {
         _removeClass(element, value);
     } else {
         _addClass(element, value);
     }
 };
-
-var ex = {
-    polyfill: polyfill,
-    _addClass: _addClass,
-    _removeClass: _removeClass,
-    _hasClass: _hasClass,
-    _toggleClass: _toggleClass
-};
-
-extend(ex,window.u || {});
-window.u = ex;
-
-export {ex};
 

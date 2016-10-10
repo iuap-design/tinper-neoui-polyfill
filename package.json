@@ -1,6 +1,6 @@
 {
-  "name": "neoui-polyfill",
-  "version": "1.2.14",
+  "name": "tinper-neoui-polyfill",
+  "version": "0.0.1",
   "description": "Neoui针对ie8的Polyfill",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iuap-design/neoui-polyfill.git"
+    "url": "git+https://github.com/iuap-design/tinper-neoui-polyfill.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iuap-design/neoui-polyfill/issues"
+    "url": "https://github.com/iuap-design/tinper-neoui-polyfill/issues"
   },
-  "homepage": "https://github.com/iuap-design/neoui-polyfill#readme",
+  "homepage": "https://github.com/iuap-design/tinper-neoui-polyfill#readme",
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",

@@ -1,6 +1,6 @@
 {
   "name": "tinper-neoui-polyfill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Neoui针对ie8的Polyfill",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "gulp-webpack": "^1.5.0",
-    "neoui-sparrow": "^1.4.6",
     "webpack": "^1.13.1",
     "yargs": "^4.8.1"
   },

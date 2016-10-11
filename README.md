@@ -1,4 +1,4 @@
-# Neoui-Polyfill
+# Tinper Neoui Polyfill
 Neoui针对ie8的Polyfill
 
 ## 目录结构

@@ -1,6 +1,6 @@
 {
   "name": "tinper-neoui-polyfill",
-  "version": "3.1.8",
+  "version": "3.1.9",
   "description": "Neoui针对ie8的Polyfill",
   "main": "index.js",
   "scripts": {

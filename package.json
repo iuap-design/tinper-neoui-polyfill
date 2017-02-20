@@ -1,12 +1,12 @@
 {
   "name": "tinper-neoui-polyfill",
-  "version": "3.1.25",
+  "version": "3.1.26",
   "description": "Neoui针对ie8的Polyfill",
   "main": "index.js",
   "scripts": {
     "compile": "webpack --colors --progress",
     "product": "gulp dist",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && node changeSort.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 ",
     "utipbuild": "gulp dist"
   },
   "repository": {

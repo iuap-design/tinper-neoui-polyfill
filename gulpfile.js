@@ -8,10 +8,10 @@ var uglify = require('gulp-uglify');
  */
 gulp.task('build', function() {
 	return gulp.src(['./vendor/*.js','!./vendor/respond.js','./js/*.js'])
-		.pipe(concat('u-polyfill-core.js'))
+		.pipe(concat('tinper-neoui-polyfill-core.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
-		.pipe(rename('u-polyfill-core.min.js'))
+		.pipe(rename('tinper-neoui-polyfill-core.min.js'))
 		.pipe(gulp.dest('./dist'));
 });
 
@@ -20,10 +20,10 @@ gulp.task('build', function() {
  */
 gulp.task('respond', function() {
 	return gulp.src(['./vendor/respond.js'])
-		.pipe(rename('u-polyfill-respond.js'))
+		.pipe(rename('tinper-neoui-polyfill-respond.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
-		.pipe(rename('u-polyfill-respond.min.js'))
+		.pipe(rename('tinper-neoui-polyfill-respond.min.js'))
 		.pipe(gulp.dest('./dist'));
 });
 
@@ -32,10 +32,10 @@ gulp.task('respond', function() {
  */
 gulp.task('concat', ['build','respond'], function() {
 	return gulp.src(['./vendor/*.js','./js/*.js'])
-		.pipe(concat('u-polyfill.js'))
+		.pipe(concat('tinper-neoui-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
-		.pipe(rename('u-polyfill.min.js'))
+		.pipe(rename('tinper-neoui-polyfill.min.js'))
 		.pipe(gulp.dest('./dist'));
 });
 

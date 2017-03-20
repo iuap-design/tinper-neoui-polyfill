@@ -30,8 +30,8 @@ gulp.task('respond', function() {
 /**
  * polyfill代码集成
  */
-gulp.task('concat', ['build','respond'], function() {
-	return gulp.src(['./vendor/*.js','./js/*.js'])
+gulp.task('concat', function() {
+	return gulp.src(['./vendor/*.js','./src/*.js'])
 		.pipe(concat('tinper-neoui-polyfill.js'))
 		.pipe(gulp.dest('./dist'))
 		.pipe(uglify())
